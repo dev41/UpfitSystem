@@ -1,0 +1,84 @@
+фтп:
+хост - upfit.ftp.tools
+u: upfit_ftp
+p: UG48qp2U
+поддомен: app.upfit.com.ua
+
+Параметры SSH-доступа к текущему аккаунту, которые необходимо использовать при входе:
+Хост: upfit.ftp.tools
+Логин:	upfit
+Пароль: UpFit2018!!!
+ssh upfit@upfit.ftp.tools
+
+mysql:
+Хост:	upfit.mysql.tools
+Логин:	upfit_db
+Пароль: hh9dlFFB
+
+phpMyAdmin: phpMyAdmin
+
+CONSOLE:
+
+parsing translations: php yii message ./config/i18n.php
+run webpack (with watcher): node_modules/.bin/webpack -w
+
+update AdminLTE css:
+cp web/css/vendor/AdminLTE.min.css vendor/almasaeed2010/adminlte/dist/css/
+
+delete file from git without local version:
+git rm --cached mylogfile.log
+
+path to php72:
+/usr/local/php72/bin/php
+
+composer install:
+/usr/local/php72/bin/php composer.phar install
+
+run translate parser
+php yii message ./config/i18n.php
+
+checkout to origin branch with track:
+git checkout -b develop --track remotes/origin/develop
+
+.htaccess
+  
+#DirectoryIndex web/index.html
+
+#Options -Indexes
+#Options FollowSymlinks
+RewriteEngine on
+
+RewriteCond %{REQUEST_URI} ^/api/$
+RewriteRule ^(api)/$ /$1 [R=301,L]
+RewriteCond %{REQUEST_URI} ^/api
+RewriteRule ^api(/.+)?$ /api/web/$1 [L,PT]
+#
+#RewriteCond %{HTTPS} off
+#
+RewriteCond %{REQUEST_URI} ^.*$
+RewriteRule ^(.*)$ /web/$1
+
+#DirectoryIndex web/index.html
+
+config/db.php
+
+<?php
+
+return [
+//    'class' => 'yii\db\Connection',
+//    'dsn' => 'mysql:host=newnor00.mysql.tools;dbname=newnor00_sport12',
+//    'username' => 'newnor00_sport12',
+//    'password' => 'mftcbn72',
+//    'charset' => 'utf8',
+
+    'class' => 'yii\db\Connection',
+    'dsn' => 'mysql:host=upfit.mysql.tools;dbname=upfit_db',
+    'username' => 'upfit_db',
+    'password' => 'hh9dlFFB',
+    'charset' => 'utf8',
+
+    // Schema cache options (for production environment)
+    //'enableSchemaCache' => true,
+    //'schemaCacheDuration' => 60,
+    //'schemaCache' => 'cache',
+];

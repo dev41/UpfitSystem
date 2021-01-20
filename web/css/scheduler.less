@@ -1,0 +1,212 @@
+@import 'variables';
+
+.uf-schedule-container {
+
+  color: #444;
+  max-width: 1200px;
+
+  h1, h2, h3, h4, p {
+    margin: 0;
+  }
+
+  .fc-view-container {
+    .fc-day-number {
+      font-size: 0.9em;
+    }
+  }
+
+  .uf-event-container h3 {
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .fc-button {
+    background-color: #e9e9e9;
+
+    &:hover,
+    &:active,
+    &.hover {
+      background-color: #f4f4f4;
+    }
+
+    .fc-corner-right,
+    .fc-corner-left {
+      color: #777777;
+    }
+
+  }
+
+  .fc-state-down,
+  .fc-state-active {
+    box-shadow: none;
+    background-color: white;
+
+    &:hover {
+      background-color: white;
+    }
+  }
+
+  .list-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group {
+    margin-bottom: 8px;
+  }
+
+  > .panel-default > .panel-body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .fc-event {
+    border-color: @event-border-color;
+    color: @event-color;
+    padding: 2px;
+    font-weight: normal;
+  }
+
+  .fc-event,
+  .fc-event-dot {
+    background-color: @event-bg-color;
+    color: #333;
+  }
+
+  .coaching-list {
+
+    a {
+      color: @event-color;
+      text-decoration: none;
+
+      &:hover {
+        cursor: inherit;
+      }
+    }
+
+    .fc-event {
+      padding-top: 3px;
+      padding-left: 5px;
+      cursor: move;
+
+      &:hover {
+        animation: event-active 0.5s both;
+      }
+      &:not(hover) {
+        animation: event-no-active 0.5s both;
+      }
+
+      @keyframes event-active {
+        0% {
+          border-color: @event-border-color;
+        }
+        100% {
+          border-color: @event-border-color-active;
+        }
+      }
+      @keyframes event-no-active {
+        0% {
+          border-color: @event-border-color-active;
+        }
+        100% {
+          border-color: @event-border-color;
+        }
+      }
+
+    }
+
+    .list-group-item {
+      padding: 3px 3px;
+
+      &:first-child {
+        padding: 10px 3px;
+        text-align: center;
+      }
+    }
+  }
+
+  .fc-toolbar {
+    padding: 0 0 10px 0;
+    margin-bottom: 0;
+
+    button {
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-size: 1.6em;
+      color: #444;
+    }
+
+    .fc-left {
+      font-weight: normal;
+      font-size: 0.9em;
+    }
+  }
+
+  .fc-time-grid.fc-unselectable {
+    .fc-bg table tbody tr td {
+      border: none;
+
+      &.active {
+        background-color: #f0fff8;
+        border: 1px dashed #333;
+      }
+    }
+  }
+
+  .fc-axis.fc-time {
+    font-weight: bold;
+    text-align: left;
+    color: #6c788e;
+    font-size: 0.85em;
+  }
+
+  .fc-widget-header {
+
+    thead {
+      tr {
+        th {
+          span {
+            font-weight: bold;
+            overflow: hidden;
+            display: block;
+            padding: 3px;
+            text-overflow: ellipsis;
+            color: #6c788e;
+            background: #e2e4ee;
+            font-size: 0.85em;
+          }
+        }
+      }
+    }
+  }
+}
+
+.uf-popup {
+
+  .uf-schedule-container {
+
+    margin-bottom: 0;
+
+    > .panel {
+      border: none;
+
+      > .panel-body {
+        padding-bottom: 0;
+
+        .container-fluid:first-of-type {
+          padding: 0;
+        }
+      }
+    }
+
+  }
+}
+
+.ui-widget-header {
+  border: 1px solid #ddd;
+  background: #e9e9e9;
+  color: #333;
+  font-weight: bold;
+}

@@ -1,0 +1,52 @@
+.uf-view {
+
+  .select2-container--disabled {
+    .select2-selection--multiple {
+      cursor: default;
+      background: white;
+      border: none;
+      box-shadow: none;
+    }
+  }
+
+  .select2-selection.select2-selection--multiple {
+    .select2-selection__choice:first-child {
+      margin-left: 0px;
+    }
+  }
+
+  .select2-search {
+    display: none;
+  }
+
+  overflow: hidden;
+
+  .row {
+
+    border-bottom: 1px solid #dddddd;
+    margin-top: 8px;
+
+    &:first-child {
+      margin-top: 0px;
+
+      > div {
+        padding-left: 15px;
+      }
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    > div {
+
+      min-height: 30px;
+      margin-bottom: 4px;
+
+      &:last-of-type {
+        margin-bottom: 4px;
+      }
+    }
+  }
+
+}

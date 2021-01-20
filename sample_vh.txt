@@ -1,0 +1,37 @@
+http vh:
+
+<VirtualHost *:80>
+    DocumentRoot /var/www/cryptoreview/public
+    ServerName cryptoreview.loc
+
+  <Directory /var/www/cryptoreview>
+    Options All
+    AllowOverride All
+    Require all granted
+  </Directory>
+
+    ErrorLog /var/www/cryptoreview/error.log
+    CustomLog /var/www/cryptoreview/access.log combined
+</VirtualHost>
+
+https vh:
+
+<VirtualHost *:443>
+    DocumentRoot /var/www/cryptoreview/public
+    ServerName cryptoreview.loc
+
+	SSLEngine on
+	SSLProtocol all -SSLv2
+
+	SSLCertificateFile /etc/ssl/certs/server.pem
+	SSLCertificateKeyFile /etc/ssl/private/server.key
+
+  <Directory /var/www/cryptoreview>
+    Options All
+    AllowOverride All
+    Require all granted
+  </Directory>
+
+    ErrorLog /var/www/cryptoreview/error.log
+    CustomLog /var/www/cryptoreview/access.log combined
+</VirtualHost>

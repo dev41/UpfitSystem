@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>api\controllers\UserController | UpfitSystem API Documentations v1.0</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:api_controllers_UserController" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">UpfitSystem API Documentations v1.0</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                    <li><a href="/"><strong class="site-url">UpfitSystem</strong></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../api.html">api</a></li><li class="backslash">\</li><li><a href="../../api/controllers.html">controllers</a></li><li class="backslash">\</li><li>UserController</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            UserController
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>UserController</strong>        extends <abbr title="app\src\library\BaseApiController">BaseApiController</abbr>
+</p>
+
+        
+    
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table class="summary-table table table-striped table-bordered table-hover">
+        <colgroup>
+            <col class="col-method">
+            <col class="col-description">
+            <col class="col-defined">
+        </colgroup>
+        <tbody>
+        <tr>
+            <th>Method</th>
+            <th>Description</th>
+        </tr>
+                    <tr class="inherited">
+                <td>
+                    <a href="#method_actionLogin"><strong class="method-type">array</strong> <strong>actionLogin</strong><span class="symbol-black">(</span><span class=required-param><strong class="type">string </strong>$identity,</span><span class=required-param><strong class="type">string </strong>$password</span><span class="symbol-black">)</span>
+        </a>
+                </td>
+                                    <td>Login user by identity</td></tr>
+                    <tr class="inherited">
+                <td>
+                    <a href="#method_actionLogout"><strong class="method-type">array</strong> <strong>actionLogout</strong><span class="symbol-black">(</span><span class="symbol-black">)</span>
+        </a>
+                </td>
+                                    <td>Logout from system</td></tr>
+                    <tr class="inherited">
+                <td>
+                    <a href="#method_actionRegister"><strong class="method-type">array</strong> <strong>actionRegister</strong><span class="symbol-black">(</span><span class=required-param><strong class="type">string </strong>$identity,</span><span class=required-param><strong class="type">string </strong>$password,</span><span class=optional-param><strong class="type">string </strong>$first_name = &#039;&#039;,</span><span class=optional-param><strong class="type">string </strong>$last_name = &#039;&#039;,</span><span class=optional-param><strong class="type">string </strong>$address = &#039;&#039;,</span><span class=optional-param><strong class="type">string </strong>$phone = &#039;&#039;,</span><span class=optional-param><strong class="type">string </strong>$birthday = &#039;&#039;,</span><span class=optional-param><strong class="type">string </strong>$description = &#039;&#039;</span><span class="symbol-black">)</span>
+        </a>
+                </td>
+                                    <td>Register user by identity</td></tr>
+                    <tr class="inherited">
+                <td>
+                    <a href="#method_actionLoginFb"><strong class="method-type">array</strong> <strong>actionLoginFb</strong><span class="symbol-black">(</span><span class=required-param><strong class="type">int </strong>$id,</span><span class=required-param><strong class="type">string </strong>$token</span><span class="symbol-black">)</span>
+        </a>
+                </td>
+                                    <td>Login by Facebook</td></tr>
+                    <tr class="inherited">
+                <td>
+                    <a href="#method_actionRegisterFb"><strong class="method-type">array</strong> <strong>actionRegisterFb</strong><span class="symbol-black">(</span><span class=required-param><strong class="type">int </strong>$id,</span><span class=required-param><strong class="type">string </strong>$token,</span><span class=optional-param><strong class="type">array </strong>$data = []</span><span class="symbol-black">)</span>
+        </a>
+                </td>
+                                    <td>Register user by Facebook</td></tr>
+                    <tr class="inherited">
+                <td>
+                    <a href="#method_actionUpdate"><strong class="method-type">array</strong> <strong>actionUpdate</strong><span class="symbol-black">(</span><span class=required-param><strong class="type">int </strong>$id,</span><span class=optional-param><strong class="type">array </strong>$data = []</span><span class="symbol-black">)</span>
+        </a>
+                </td>
+                                    <td>Update user by id</td></tr>
+                    <tr class="inherited">
+                <td>
+                    <a href="#method_actionRequestCustomerToClub"><strong class="method-type">array</strong> <strong>actionRequestCustomerToClub</strong><span class="symbol-black">(</span><span class=required-param><strong class="type">int </strong>$club_id,</span><span class=optional-param><strong class="type">string </strong>$card_number = null</span><span class="symbol-black">)</span>
+        </a>
+                </td>
+                                    <td>Request customer to club</td></tr>
+                    <tr class="inherited">
+                <td>
+                    <a href="#method_actionLeaveClub"><strong class="method-type">array</strong> <strong>actionLeaveClub</strong><span class="symbol-black">(</span><span class=required-param><strong class="type">int </strong>$club_id,</span><span class=optional-param><strong class="type">bool </strong>$leave_events = false</span><span class="symbol-black">)</span>
+        </a>
+                </td>
+                                    <td>Customer leave the club</td></tr>
+                    <tr class="inherited">
+                <td>
+                    <a href="#method_actionGetUserInfo"><strong class="method-type">array</strong> <strong>actionGetUserInfo</strong><span class="symbol-black">(</span><span class=required-param><strong class="type">int </strong>$user_id</span><span class="symbol-black">)</span>
+        </a>
+                </td>
+                                    <td>Get user info by id</td></tr>
+                </tbody>
+    </table>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <a href="#method_actionLogin"><h3  id="method_actionLogin">
+        <div class="location">at         line 54</div>
+        <div class="method-signature">                    <strong class="method-type">array</strong>
+    <strong>actionLogin</strong><span class="symbol-black">(</span><span class=required-param><strong class="type">string </strong>$identity,</span><span class=required-param><strong class="type">string </strong>$password</span><span class="symbol-black">)</span>
+        </div>
+        </h3></a>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Login user by identity</p>                                                </div>
+                <div class="tags">
+                            <h4>HTTP Request</h4>
+
+                    <table class="table table-condensed table-bordered table-hover">
+        <tr>
+            <th>Url</th>
+            <th>Description</th>
+        </tr>
+                    <tr>
+                <td>
+                                            <a href="https://app.upfit.com.ua/api/v1/user/login">https://app.upfit.com.ua/api/v1/user/login</a>
+                                    </td>
+                <td>base url</td>
+            </tr>
+                    <tr>
+                <td>
+                                            <a href="https://app.upfit.com.ua/api/v1/user/login?username=admin&amp;password=123456">https://app.upfit.com.ua/api/v1/user/login?username=admin&amp;password=123456</a>
+                                    </td>
+                <td>example request</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Parameters</h4>
+
+                        <table class="table table-condensed table-bordered table-hover">
+        <tr>
+            <th>Type</th>
+            <th>Name</th>
+            <th>Required</th>
+            <th>Description</th>
+            
+        </tr>
+                    <tr>
+                <td class="method-parameter-type">string</td>
+                <td class="method-parameter-name">identity</td>
+                <td class="method-parameter-required">true</td>
+                <td class="method-parameter-description"><code>username</code> or <code>email</code>(max of 50 characters for username and 100 for email).</td>
+                            </tr>
+                    <tr>
+                <td class="method-parameter-type">string</td>
+                <td class="method-parameter-name">password</td>
+                <td class="method-parameter-required">true</td>
+                <td class="method-parameter-description">Minimum of 6 characters required.</td>
+                            </tr>
+            </table>
+
+            
+                            <h4>Example response</h4>
+
+                    <pre><code>{
+  'user': {
+      'id': 1,
+      'username': 'admin',
+      'auth_key': 'vCzeiVsVEjgSi2WOcTIY-p9kL-tqSV-R',
+      'password_hash': '$2y$13$bRJPMcerRXnF0C3hoihxx.bqW6LDW3byUcFPJKf0WSLEb4koAlJ5a',
+      'password_reset_token': null,
+      'email': 'admin@mail.com',
+      'api_auth_key': 'OsqPsFY6R6EKErb6fsw2PCAuni6KhkoI',
+      'fb_user_id': '426581574530111',
+      'fb_token': null,
+      'push_token': null,
+      'device_id': null,
+      'role_id': 1,
+      'first_name': 'Henry',
+      'last_name': 'Saimon',
+      'address': 'Saxon Euphory Club, улица Михайла Максимовича, Киев',
+      'description': null,
+      'phone': '+370682132612',
+      'birthday': '2018-08-20',
+      'avatar': null,
+      'status': 1,
+      'created_at': '2018-08-20 08:43:49',
+      'created_by': 1,
+      'updated_at': null,
+      'updated_by': null
+  },
+  'info': {
+      'clubs': [],
+  },
+  'success': true,
+}</code></pre>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="/web/sami/build/app/src/exception/ApiException.html"><abbr title="api\controllers\1103">1103</abbr></a></td>
+                <td>Required params not found</td>
+            </tr>
+                    <tr>
+                <td><a href="/web/sami/build/app/src/exception/ApiException.html"><abbr title="api\controllers\1203">1203</abbr></a></td>
+                <td>Identity or password incorrect</td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <a href="#method_actionLogout"><h3  id="method_actionLogout">
+        <div class="location">at         line 68</div>
+        <div class="method-signature">                    <strong class="method-type">array</strong>
+    <strong>actionLogout</strong><span class="symbol-black">(</span><span class="symbol-black">)</span>
+        </div>
+        </h3></a>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Logout from system</p>                                                </div>
+                <div class="tags">
+                            <h4>HTTP Request</h4>
+
+                    <table class="table table-condensed table-bordered table-hover">
+        <tr>
+            <th>Url</th>
+            <th>Description</th>
+        </tr>
+                    <tr>
+                <td>
+                                            <a href="https://app.upfit.com.ua/api/v1/user/logout">https://app.upfit.com.ua/api/v1/user/logout</a>
+                                    </td>
+                <td>base url</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Example response</h4>
+
+                    <pre><code>{
+  'success': true
+}</code></pre>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <a href="#method_actionRegister"><h3  id="method_actionRegister">
+        <div class="location">at         line 114</div>
+        <div class="method-signature">                    <strong class="method-type">array</strong>
+    <strong>actionRegister</strong><span class="symbol-black">(</span><span class=required-param><strong class="type">string </strong>$identity,</span><span class=required-param><strong class="type">string </strong>$password,</span><span class=optional-param><strong class="type">string </strong>$first_name = &#039;&#039;,</span><span class=optional-param><strong class="type">string </strong>$last_name = &#039;&#039;,</span><span class=optional-param><strong class="type">string </strong>$address = &#039;&#039;,</span><span class=optional-param><strong class="type">string </strong>$phone = &#039;&#039;,</span><span class=optional-param><strong class="type">string </strong>$birthday = &#039;&#039;,</span><span class=optional-param><strong class="type">string </strong>$description = &#039;&#039;</span><span class="symbol-black">)</span>
+        </div>
+        </h3></a>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register user by identity</p>                                                </div>
+                <div class="tags">
+                            <h4>HTTP Request</h4>
+
+                    <table class="table table-condensed table-bordered table-hover">
+        <tr>
+            <th>Url</th>
+            <th>Description</th>
+        </tr>
+                    <tr>
+                <td>
+                                            <a href="https://app.upfit.com.ua/api/v1/user/register">https://app.upfit.com.ua/api/v1/user/register</a>
+                                    </td>
+                <td>base url</td>
+            </tr>
+                    <tr>
+                <td>
+                                            <a href="https://app.upfit.com.ua/api/v1/user/register?username=admin&amp;password=123456">https://app.upfit.com.ua/api/v1/user/register?username=admin&amp;password=123456</a>
+                                    </td>
+                <td>example request</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Parameters</h4>
+
+                        <table class="table table-condensed table-bordered table-hover">
+        <tr>
+            <th>Type</th>
+            <th>Name</th>
+            <th>Required</th>
+            <th>Description</th>
+            
+        </tr>
+                    <tr>
+                <td class="method-parameter-type">string</td>
+                <td class="method-parameter-name">identity</td>
+                <td class="method-parameter-required">true</td>
+                <td class="method-parameter-description"><code>username</code> or <code>email</code>(max of 50 characters for username and 100 for email).</td>
+                            </tr>
+                    <tr>
+                <td class="method-parameter-type">string</td>
+                <td class="method-parameter-name">password</td>
+                <td class="method-parameter-required">true</td>
+                <td class="method-parameter-description">Minimum of 6 characters required.</td>
+                            </tr>
+                    <tr>
+                <td class="method-parameter-type">string</td>
+                <td class="method-parameter-name">first_name</td>
+                <td class="method-parameter-required">false</td>
+                <td class="method-parameter-description">Max of 50 characters.</td>
+                            </tr>
+                    <tr>
+                <td class="method-parameter-type">string</td>
+                <td class="method-parameter-name">last_name</td>
+                <td class="method-parameter-required">false</td>
+                <td class="method-parameter-description">Max of 50 characters.</td>
+                            </tr>
+                    <tr>
+                <td class="method-parameter-type">string</td>
+                <td class="method-parameter-name">address</td>
+                <td class="method-parameter-required">false</td>
+                <td class="method-parameter-description">Max of 255 characters.</td>
+                            </tr>
+                    <tr>
+                <td class="method-parameter-type">string</td>
+                <td class="method-parameter-name">phone</td>
+                <td class="method-parameter-required">false</td>
+                <td class="method-parameter-description">Max of 20 characters.</td>
+                            </tr>
+                    <tr>
+                <td class="method-parameter-type">string</td>
+                <td class="method-parameter-name">birthday</td>
+                <td class="method-parameter-required">false</td>
+                <td class="method-parameter-description">Format (Y-m-d).</td>
+                            </tr>
+                    <tr>
+                <td class="method-parameter-type">string</td>
+                <td class="method-parameter-name">description</td>
+                <td class="method-parameter-required">false</td>
+                <td class="method-parameter-description">Description of user.</td>
+                            </tr>
+            </table>
+
+            
+                            <h4>Example response</h4>
+
+                    <pre><code>{
+ 'user': {
+     'username': 'name',
+     'first_name': 'firstname',
+     'last_name': 'lastname',
+     'address': 'citu',
+     'phone': '123123',
+     'birthday': '2018-08-20',
+     'description': 'i',
+     'email': null,
+     'password_hash': '$2y$13$Ca.y4icFxPeCy0jLHcIpMOWAuMfzqs9GVsS0gHrjDwhRiOUtZDWl6',
+     'auth_key': '4BP44Pgmenh0qpE3UHZcT6qcLm99soNp',
+     'api_auth_key': 'aPuEAY6Ppseq_4AcYhDp3_Z3n2FR2-ag',
+     'created_at': '2018-08-27 11:33:51',
+     'created_by': 1,
+     'status': 1,
+     'id': 42
+ }
+ 'success': true,
+}</code></pre>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="/web/sami/build/app/src/exception/ApiException.html"><abbr title="api\controllers\1102">1102</abbr></a></td>
+                <td>Required params not found</td>
+            </tr>
+                    <tr>
+                <td><a href="/web/sami/build/app/src/exception/ApiException.html"><abbr title="api\controllers\1103">1103</abbr></a></td>
+                <td>Params must be unique</td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <a href="#method_actionLoginFb"><h3  id="method_actionLoginFb">
+        <div class="location">at         line 172</div>
+        <div class="method-signature">                    <strong class="method-type">array</strong>
+    <strong>actionLoginFb</strong><span class="symbol-black">(</span><span class=required-param><strong class="type">int </strong>$id,</span><span class=required-param><strong class="type">string </strong>$token</span><span class="symbol-black">)</span>
+        </div>
+        </h3></a>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Login by Facebook</p>                                                </div>
+                <div class="tags">
+                            <h4>HTTP Request</h4>
+
+                    <table class="table table-condensed table-bordered table-hover">
+        <tr>
+            <th>Url</th>
+            <th>Description</th>
+        </tr>
+                    <tr>
+                <td>
+                                            <a href="https://app.upfit.com.ua/api/v1/user/login-fb">https://app.upfit.com.ua/api/v1/user/login-fb</a>
+                                    </td>
+                <td>base url</td>
+            </tr>
+                    <tr>
+                <td>
+                                            <a href="https://app.upfit.com.ua/api/v1/user/login-fb?id=426581574530112&amp;token=EAAD8H...">https://app.upfit.com.ua/api/v1/user/login-fb?id=426581574530112&amp;token=EAAD8H...</a>
+                                    </td>
+                <td>example request</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Parameters</h4>
+
+                        <table class="table table-condensed table-bordered table-hover">
+        <tr>
+            <th>Type</th>
+            <th>Name</th>
+            <th>Required</th>
+            <th>Description</th>
+            
+        </tr>
+                    <tr>
+                <td class="method-parameter-type">int</td>
+                <td class="method-parameter-name">id</td>
+                <td class="method-parameter-required">true</td>
+                <td class="method-parameter-description">Users Facebook ID.</td>
+                            </tr>
+                    <tr>
+                <td class="method-parameter-type">string</td>
+                <td class="method-parameter-name">token</td>
+                <td class="method-parameter-required">true</td>
+                <td class="method-parameter-description">Facebook token.</td>
+                            </tr>
+            </table>
+
+            
+                            <h4>Example response</h4>
+
+                    <pre><code>{
+ 'user': {
+     'id': 1,
+     'username': 'admin',
+     'auth_key': 'vCzeiVsVEjgSi2WOcTIY-p9kL-tqSV-R',
+     'password_hash': '$2y$13$bRJPMcerRXnF0C3hoihxx.bqW6LDW3byUcFPJKf0WSLEb4koAlJ5a',
+     'password_reset_token': null,
+     'email': 'admin@mail.com',
+     'api_auth_key': '5xFmIAddVwP9HdSDDRJz5pTrVG3pPGdV',
+     'fb_user_id': '426581574530112',
+     'fb_token': 'EAAD8HxQv1dEBAKYeHjZASEHiZBZAyAJzmPltcYoQjWhpl4ClLXcXgVOjJQOUp7btPZAvKfnjx4N785Ld19R8J10ObDUbBOwQ324xyHEeGxZAz9etdAuFI5ZBgjSvKV0qvu3ANpIgRZCDYZBDQkdIGCOTu4zloBFW41FCZAnhL3rhVlqLmYWAECDSjkztERRg1ivQycfZBLjThEZAgZDZD',
+     'push_token': null,
+     'device_id': null,
+     'role_id': 1,
+     'first_name': 'Henry',
+     'last_name': 'Saimon',
+     'address': 'Saxon Euphory Club, улица Михайла Максимовича, Киев',
+     'description': null,
+     'phone': '+370682132612',
+     'birthday': '2018-08-20',
+     'avatar': null,
+     'status': 1,
+     'created_at': '2018-08-20 08:43:49',
+     'created_by': 1,
+     'updated_at': null,
+     'updated_by': null
+ },
+ 'success': true
+}</code></pre>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="/web/sami/build/app/src/exception/ApiException.html"><abbr title="api\controllers\1101">1101</abbr></a></td>
+                <td>Model not found</td>
+            </tr>
+                    <tr>
+                <td><a href="/web/sami/build/app/src/exception/ApiException.html"><abbr title="api\controllers\1102">1102</abbr></a></td>
+                <td>Required params not found</td>
+            </tr>
+                    <tr>
+                <td><a href="/web/sami/build/app/src/exception/ApiException.html"><abbr title="api\controllers\1204">1204</abbr></a></td>
+                <td>Id or token incorrect</td>
+            </tr>
+                    <tr>
+                <td><a href="/web/sami/build/app/src/exception/ApiException.html"><abbr title="api\controllers\1205">1205</abbr></a></td>
+                <td>Fb api bad response</td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <a href="#method_actionRegisterFb"><h3  id="method_actionRegisterFb">
+        <div class="location">at         line 232</div>
+        <div class="method-signature">                    <strong class="method-type">array</strong>
+    <strong>actionRegisterFb</strong><span class="symbol-black">(</span><span class=required-param><strong class="type">int </strong>$id,</span><span class=required-param><strong class="type">string </strong>$token,</span><span class=optional-param><strong class="type">array </strong>$data = []</span><span class="symbol-black">)</span>
+        </div>
+        </h3></a>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register user by Facebook</p>                                                </div>
+                <div class="tags">
+                            <h4>HTTP Request</h4>
+
+                    <table class="table table-condensed table-bordered table-hover">
+        <tr>
+            <th>Url</th>
+            <th>Description</th>
+        </tr>
+                    <tr>
+                <td>
+                                            <a href="https://app.upfit.com.ua/api/v1/user/register-fb">https://app.upfit.com.ua/api/v1/user/register-fb</a>
+                                    </td>
+                <td>base url</td>
+            </tr>
+                    <tr>
+                <td>
+                                            <a href="https://app.upfit.com.ua/api/v1/user/register-fb?id=426581574530112&amp;token=EAAD8H...">https://app.upfit.com.ua/api/v1/user/register-fb?id=426581574530112&amp;token=EAAD8H...</a>
+                                    </td>
+                <td>example request</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Parameters</h4>
+
+                        <table class="table table-condensed table-bordered table-hover">
+        <tr>
+            <th>Type</th>
+            <th>Name</th>
+            <th>Required</th>
+            <th>Description</th>
+            
+        </tr>
+                    <tr>
+                <td class="method-parameter-type">int</td>
+                <td class="method-parameter-name">id</td>
+                <td class="method-parameter-required">true</td>
+                <td class="method-parameter-description">Users Facebook ID.</td>
+                            </tr>
+                    <tr>
+                <td class="method-parameter-type">string</td>
+                <td class="method-parameter-name">token</td>
+                <td class="method-parameter-required">true</td>
+                <td class="method-parameter-description">Facebook token.</td>
+                            </tr>
+                    <tr>
+                <td class="method-parameter-type">array</td>
+                <td class="method-parameter-name">data</td>
+                <td class="method-parameter-required">false</td>
+                <td class="method-parameter-description">Available fields:</p>
+
+<p><b>string</b> <code>username</code></p>
+
+<p><b>string</b> <code>password</code></p>
+
+<p><b>string</b> <code>email</code></p>
+
+<p><b>string</b> <code>fb_user_id</code></p>
+
+<p><b>string</b> <code>push_token</code></p>
+
+<p><b>string</b> <code>device_id</code></p>
+
+<p><b>int</b> <code>role_id</code></p>
+
+<p><b>string</b> <code>first_name</code></p>
+
+<p><b>string</b> <code>last_name</code></p>
+
+<p><b>string</b> <code>address</code></p>
+
+<p><b>string</b> <code>phone</code></p>
+
+<p><b>string</b> <code>birthday</code> format: <code>(Y-m-d)</code></p>
+
+<p><b>string</b> <code>description</code>.</td>
+                            </tr>
+            </table>
+
+            
+                            <h4>Example response</h4>
+
+                    <pre><code>{
+  'user': {
+      'fb_user_id': '426581574530112',
+      'fb_token': 'EAAD8HxQv1dEBAPuIKeHtQsKkpJPAFZBGSiZCwycgvsNeIhInW06yXDYMZAZBFOBMxrSy3l4IZATpxYLOuuhyosHVyng3PXKt2UaA0aHScHgzM0wWraPwFCxg13F5dEuyWSx1R84kTA7nuVvaWhposjZBwDlqaDpgEUbh3YwQnRIZCMj5UVZBuThJVs5BH42wCfOZAWSpu5Sgw7gZDZD',
+      'email': null,
+      'auth_key': 'SFVG252_ZdYsuP-Vl8y8Wnl-cATUu1eL',
+      'api_auth_key': 'eMsYoNSG_36VhHjJd2ZG9ygwGPZrFsbS',
+      'created_at': '2018-08-27 12:12:41',
+      'created_by': 1,
+      'status': 1,
+      'id': 54
+  },
+  'success': true
+}</code></pre>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="/web/sami/build/app/src/exception/ApiException.html"><abbr title="api\controllers\1102">1102</abbr></a></td>
+                <td>Required params not found</td>
+            </tr>
+                    <tr>
+                <td><a href="/web/sami/build/app/src/exception/ApiException.html"><abbr title="api\controllers\1205">1205</abbr></a></td>
+                <td>Fb api bad response</td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <a href="#method_actionUpdate"><h3  id="method_actionUpdate">
+        <div class="location">at         line 306</div>
+        <div class="method-signature">                    <strong class="method-type">array</strong>
+    <strong>actionUpdate</strong><span class="symbol-black">(</span><span class=required-param><strong class="type">int </strong>$id,</span><span class=optional-param><strong class="type">array </strong>$data = []</span><span class="symbol-black">)</span>
+        </div>
+        </h3></a>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Update user by id</p>                                                </div>
+                <div class="tags">
+                            <h4>HTTP Request</h4>
+
+                    <table class="table table-condensed table-bordered table-hover">
+        <tr>
+            <th>Url</th>
+            <th>Description</th>
+        </tr>
+                    <tr>
+                <td>
+                                            <a href="https://app.upfit.com.ua/api/v1/user/update">https://app.upfit.com.ua/api/v1/user/update</a>
+                                    </td>
+                <td>base url</td>
+            </tr>
+                    <tr>
+                <td>
+                                            <a href="https://app.upfit.com.ua/api/v1/user/update?id=4&amp;data[username]=newName">https://app.upfit.com.ua/api/v1/user/update?id=4&amp;data[username]=newName</a>
+                                    </td>
+                <td>example request</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Parameters</h4>
+
+                        <table class="table table-condensed table-bordered table-hover">
+        <tr>
+            <th>Type</th>
+            <th>Name</th>
+            <th>Required</th>
+            <th>Description</th>
+            
+        </tr>
+                    <tr>
+                <td class="method-parameter-type">int</td>
+                <td class="method-parameter-name">id</td>
+                <td class="method-parameter-required">true</td>
+                <td class="method-parameter-description">The users ID.</td>
+                            </tr>
+                    <tr>
+                <td class="method-parameter-type">array</td>
+                <td class="method-parameter-name">data</td>
+                <td class="method-parameter-required">false</td>
+                <td class="method-parameter-description">Available fields:</p>
+
+<p><b>string</b> <code>username</code>,</p>
+
+<p><b>string</b> <code>password</code>,</p>
+
+<p><b>string</b> <code>email</code>,</p>
+
+<p><b>string</b> <code>fb_user_id</code>,</p>
+
+<p><b>string</b> <code>push_token</code>,</p>
+
+<p><b>string</b> <code>device_id</code>,</p>
+
+<p><b>int</b> <code>role_id</code>,</p>
+
+<p><b>string</b> <code>first_name</code>,</p>
+
+<p><b>string</b> <code>last_name</code>,</p>
+
+<p><b>string</b> <code>address</code>,</p>
+
+<p><b>string</b> <code>phone</code>,</p>
+
+<p><b>string</b> <code>birthday</code> (Y-m-d),</p>
+
+<p><b>string</b> <code>description</code>.</td>
+                            </tr>
+            </table>
+
+            
+                            <h4>Example response</h4>
+
+                    <pre><code>{
+  'user': {
+      'id': 4,
+      'username': 'newName',
+      'auth_key': 'xYLvDk-HkrBFXeudsUa6ZFPJK5J1Pzuk',
+      'password_hash': '$2y$13$V1GtkXd0xHXlxdB9eac/4.VMfoAi77er72oy.J5PAFKvOqJbguSSC',
+      'password_reset_token': null,
+      'email': 'ivan.p@mail.com',
+      'api_auth_key': null,
+      'fb_user_id': '291724282660547',
+      'fb_token': null,
+      'push_token': null,
+      'device_id': null,
+      'role_id': 5,
+      'first_name': 'Ivan',
+      'last_name': 'Petrov',
+      'address': 'Украина, 02133, г. Харьков, ул. Победы, 28/7',
+      'description': null,
+      'phone': '+370514132612',
+      'birthday': '2018-08-20',
+      'avatar': null,
+      'status': 1,
+      'created_at': '2018-08-20 08:43:49',
+      'created_by': 1,
+      'updated_at': '2018-08-27 12:31:13',
+      'updated_by': 1
+  },
+  'success': true
+}</code></pre>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="/web/sami/build/app/src/exception/ApiException.html"><abbr title="api\controllers\1101">1101</abbr></a></td>
+                <td>Model not found</td>
+            </tr>
+                    <tr>
+                <td><a href="/web/sami/build/app/src/exception/ApiException.html"><abbr title="api\controllers\1102">1102</abbr></a></td>
+                <td>Required params not found</td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <a href="#method_actionRequestCustomerToClub"><h3  id="method_actionRequestCustomerToClub">
+        <div class="location">at         line 327</div>
+        <div class="method-signature">                    <strong class="method-type">array</strong>
+    <strong>actionRequestCustomerToClub</strong><span class="symbol-black">(</span><span class=required-param><strong class="type">int </strong>$club_id,</span><span class=optional-param><strong class="type">string </strong>$card_number = null</span><span class="symbol-black">)</span>
+        </div>
+        </h3></a>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Request customer to club</p>                                                </div>
+                <div class="tags">
+                            <h4>HTTP Request</h4>
+
+                    <table class="table table-condensed table-bordered table-hover">
+        <tr>
+            <th>Url</th>
+            <th>Description</th>
+        </tr>
+                    <tr>
+                <td>
+                                            <a href="https://app.upfit.com.ua/api/v1/user/request-customer-to-club">https://app.upfit.com.ua/api/v1/user/request-customer-to-club</a>
+                                    </td>
+                <td>base url</td>
+            </tr>
+                    <tr>
+                <td>
+                                            <a href="https://app.upfit.com.ua/api/v1/user/request-customer-to-club?club_id=1&amp;card_number=1233212">https://app.upfit.com.ua/api/v1/user/request-customer-to-club?club_id=1&amp;card_number=1233212</a>
+                                    </td>
+                <td>example request</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Parameters</h4>
+
+                        <table class="table table-condensed table-bordered table-hover">
+        <tr>
+            <th>Type</th>
+            <th>Name</th>
+            <th>Required</th>
+            <th>Description</th>
+            
+        </tr>
+                    <tr>
+                <td class="method-parameter-type">int</td>
+                <td class="method-parameter-name">club_id</td>
+                <td class="method-parameter-required">true</td>
+                <td class="method-parameter-description">The clubs ID.</td>
+                            </tr>
+                    <tr>
+                <td class="method-parameter-type">string</td>
+                <td class="method-parameter-name">card_number</td>
+                <td class="method-parameter-required">false</td>
+                <td class="method-parameter-description">The card number.</td>
+                            </tr>
+            </table>
+
+            
+                            <h4>Example response</h4>
+
+                    <pre><code>{
+ 'success': true
+}</code></pre>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="/web/sami/build/app/src/exception/ApiException.html"><abbr title="api\controllers\1102">1102</abbr></a></td>
+                <td>Required params not found</td>
+            </tr>
+                    <tr>
+                <td><a href="/web/sami/build/app/src/exception/ApiException.html"><abbr title="api\controllers\1104">1104</abbr></a></td>
+                <td>Relation already exist</td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <a href="#method_actionLeaveClub"><h3  id="method_actionLeaveClub">
+        <div class="location">at         line 348</div>
+        <div class="method-signature">                    <strong class="method-type">array</strong>
+    <strong>actionLeaveClub</strong><span class="symbol-black">(</span><span class=required-param><strong class="type">int </strong>$club_id,</span><span class=optional-param><strong class="type">bool </strong>$leave_events = false</span><span class="symbol-black">)</span>
+        </div>
+        </h3></a>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Customer leave the club</p>                                                </div>
+                <div class="tags">
+                            <h4>HTTP Request</h4>
+
+                    <table class="table table-condensed table-bordered table-hover">
+        <tr>
+            <th>Url</th>
+            <th>Description</th>
+        </tr>
+                    <tr>
+                <td>
+                                            <a href="https://app.upfit.com.ua/api/v1/user/leave-club">https://app.upfit.com.ua/api/v1/user/leave-club</a>
+                                    </td>
+                <td>base url</td>
+            </tr>
+                    <tr>
+                <td>
+                                            <a href="https://app.upfit.com.ua/api/v1/user/leave-club?club_id=1&amp;leave_event=true">https://app.upfit.com.ua/api/v1/user/leave-club?club_id=1&amp;leave_event=true</a>
+                                    </td>
+                <td>example request</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Parameters</h4>
+
+                        <table class="table table-condensed table-bordered table-hover">
+        <tr>
+            <th>Type</th>
+            <th>Name</th>
+            <th>Required</th>
+            <th>Description</th>
+            
+        </tr>
+                    <tr>
+                <td class="method-parameter-type">int</td>
+                <td class="method-parameter-name">club_id</td>
+                <td class="method-parameter-required">true</td>
+                <td class="method-parameter-description">The clubs ID.</td>
+                            </tr>
+                    <tr>
+                <td class="method-parameter-type">bool</td>
+                <td class="method-parameter-name">leave_events</td>
+                <td class="method-parameter-required">false</td>
+                <td class="method-parameter-description">Leave the coaching.</td>
+                            </tr>
+            </table>
+
+            
+                            <h4>Example response</h4>
+
+                    <pre><code>{
+ 'success': true
+}</code></pre>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="/web/sami/build/app/src/exception/ApiException.html"><abbr title="api\controllers\1102">1102</abbr></a></td>
+                <td>Required params not found</td>
+            </tr>
+                    <tr>
+                <td><a href="/web/sami/build/app/src/exception/ApiException.html"><abbr title="api\controllers\1206">1206</abbr></a></td>
+                <td>Customer are not a club member</td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <a href="#method_actionGetUserInfo"><h3  id="method_actionGetUserInfo">
+        <div class="location">at         line 397</div>
+        <div class="method-signature">                    <strong class="method-type">array</strong>
+    <strong>actionGetUserInfo</strong><span class="symbol-black">(</span><span class=required-param><strong class="type">int </strong>$user_id</span><span class="symbol-black">)</span>
+        </div>
+        </h3></a>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get user info by id</p>                                                </div>
+                <div class="tags">
+                            <h4>HTTP Request</h4>
+
+                    <table class="table table-condensed table-bordered table-hover">
+        <tr>
+            <th>Url</th>
+            <th>Description</th>
+        </tr>
+                    <tr>
+                <td>
+                                            <a href="https://app.upfit.com.ua/api/v1/user/get-user-info">https://app.upfit.com.ua/api/v1/user/get-user-info</a>
+                                    </td>
+                <td>base url</td>
+            </tr>
+                    <tr>
+                <td>
+                                            <a href="https://app.upfit.com.ua/api/v1/user/get-user-info?user_id=1">https://app.upfit.com.ua/api/v1/user/get-user-info?user_id=1</a>
+                                    </td>
+                <td>example request</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Parameters</h4>
+
+                        <table class="table table-condensed table-bordered table-hover">
+        <tr>
+            <th>Type</th>
+            <th>Name</th>
+            <th>Required</th>
+            <th>Description</th>
+            
+        </tr>
+                    <tr>
+                <td class="method-parameter-type">int</td>
+                <td class="method-parameter-name">user_id</td>
+                <td class="method-parameter-required">true</td>
+                <td class="method-parameter-description">The user ID.</td>
+                            </tr>
+            </table>
+
+            
+                            <h4>Example response</h4>
+
+                    <pre><code>{
+  'user': {
+      'id': 1,
+      'username': 'admin',
+      'auth_key': 'vCzeiVsVEjgSi2WOcTIY-p9kL-tqSV-R',
+      'password_hash': '$2y$13$bRJPMcerRXnF0C3hoihxx.bqW6LDW3byUcFPJKf0WSLEb4koAlJ5a',
+      'password_reset_token': null,
+      'email': 'admin@mail.com',
+      'api_auth_key': 'OsqPsFY6R6EKErb6fsw2PCAuni6KhkoI',
+      'fb_user_id': '426581574530111',
+      'fb_token': null,
+      'push_token': null,
+      'device_id': null,
+      'role_id': 1,
+      'first_name': 'Henry',
+      'last_name': 'Saimon',
+      'address': 'Saxon Euphory Club, улица Михайла Максимовича, Киев',
+      'description': null,
+      'phone': '+370682132612',
+      'birthday': '2018-08-20',
+      'avatar': null,
+      'status': 1,
+      'created_at': '2018-08-20 08:43:49',
+      'created_by': 1,
+      'updated_at': null,
+      'updated_by': null
+  },
+  'info': {
+      'clubs': [],
+  },
+  'success': true,
+}</code></pre>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="/web/sami/build/app/src/exception/ApiException.html"><abbr title="api\controllers\1102">1102</abbr></a></td>
+                <td>Required params not found</td>
+            </tr>
+                    <tr>
+                <td><a href="/web/sami/build/app/src/exception/ApiException.html"><abbr title="api\controllers\1101">1101</abbr></a></td>
+                <td>Model not found</td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

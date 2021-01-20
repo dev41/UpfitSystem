@@ -1,0 +1,129 @@
+@import "variables";
+
+.uf-listing {
+
+  .panel-heading {
+    height: 42px;
+    padding: 7px 7px;
+
+    strong {
+      font-weight: normal;
+      margin-left: 10px;
+      vertical-align: sub;
+    }
+  }
+
+  .panel-body {
+    padding: 0;
+  }
+
+  .uf-listing-button {
+
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &.uf-listing-button-delete {
+      color: @blue-color;
+    }
+
+    &.uf-listing-button-edit {
+      color: @blue-color;
+    }
+  }
+
+  table {
+    thead {
+      th {
+        a {
+          color: @black-text;
+        }
+      }
+    }
+  }
+
+}
+
+.uf-confirm-dialog {
+  &.fade {
+    opacity: 1;
+  }
+
+  .modal-dialog {
+    top: 15%;
+  }
+}
+
+.img-thumbnail
+{
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.uf-customer-change-status {
+  cursor: pointer;
+}
+.uf-notification-change-status {
+  cursor: pointer;
+}
+
+.grid-view {
+  .table {
+    thead {
+      input {
+        width: 100%;
+      }
+      th {
+        position: relative;
+        padding-right: 30px;
+        .sorting {
+          cursor: pointer;
+          &:after {
+            opacity: 0.2;
+            content: "\e150";
+            font-family: 'Glyphicons Halflings';
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            display: block;
+          }
+        }
+
+        .asc:after {
+          opacity: 0.5;
+          content: "\e155";
+          font-family: 'Glyphicons Halflings';
+          position: absolute;
+          bottom: 8px;
+          right: 8px;
+          display: block;
+        }
+
+        .desc:after {
+          opacity: 0.5;
+          content: "\e156";
+          font-family: 'Glyphicons Halflings';
+          position: absolute;
+          bottom: 8px;
+          right: 8px;
+          display: block;
+        }
+      }
+    }
+    td {
+      vertical-align: middle;
+      overflow-x: hidden;
+      word-break: break-word;
+    }
+  }
+  td:last-child {
+    text-align: center;
+  }
+}
+
+.list-pagination {
+  text-align: right;
+  margin: 8px 0 0;
+}

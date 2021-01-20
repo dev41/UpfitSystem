@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>api\controllers\CoachingController | UpfitSystem API Documentations v1.0</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:api_controllers_CoachingController" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">UpfitSystem API Documentations v1.0</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                    <li><a href="/"><strong class="site-url">UpfitSystem</strong></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../api.html">api</a></li><li class="backslash">\</li><li><a href="../../api/controllers.html">controllers</a></li><li class="backslash">\</li><li>CoachingController</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            CoachingController
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>CoachingController</strong>        extends <abbr title="app\src\library\BaseApiController">BaseApiController</abbr>
+</p>
+
+        
+    
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table class="summary-table table table-striped table-bordered table-hover">
+        <colgroup>
+            <col class="col-method">
+            <col class="col-description">
+            <col class="col-defined">
+        </colgroup>
+        <tbody>
+        <tr>
+            <th>Method</th>
+            <th>Description</th>
+        </tr>
+                    <tr class="inherited">
+                <td>
+                    <a href="#method_actionIndex"><strong class="method-type">array</strong> <strong>actionIndex</strong><span class="symbol-black">(</span><span class=optional-param><strong class="type">array </strong>$conditions = [],</span><span class=optional-param><strong class="type">array </strong>$sort = [],</span><span class=optional-param><strong class="type">array </strong>$pagination = [],</span><span class=optional-param><strong class="type">string </strong>$language = null</span><span class="symbol-black">)</span>
+        </a>
+                </td>
+                                    <td>Returns the info about coaching</td></tr>
+                </tbody>
+    </table>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <a href="#method_actionIndex"><h3  id="method_actionIndex">
+        <div class="location">at         line 89</div>
+        <div class="method-signature">                    <strong class="method-type">array</strong>
+    <strong>actionIndex</strong><span class="symbol-black">(</span><span class=optional-param><strong class="type">array </strong>$conditions = [],</span><span class=optional-param><strong class="type">array </strong>$sort = [],</span><span class=optional-param><strong class="type">array </strong>$pagination = [],</span><span class=optional-param><strong class="type">string </strong>$language = null</span><span class="symbol-black">)</span>
+        </div>
+        </h3></a>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the info about coaching</p>                                                </div>
+                <div class="tags">
+                            <h4>HTTP Request</h4>
+
+                    <table class="table table-condensed table-bordered table-hover">
+        <tr>
+            <th>Url</th>
+            <th>Description</th>
+        </tr>
+                    <tr>
+                <td>
+                                            <a href="https://app.upfit.com.ua/api/v1/coaching/index">https://app.upfit.com.ua/api/v1/coaching/index</a>
+                                    </td>
+                <td>base url</td>
+            </tr>
+                    <tr>
+                <td>
+                                            <a href="https://app.upfit.com.ua/api/v1/coaching/index?language=ru&amp;conditions[0]=&lt;&amp;conditions[1]=#coaching_id&amp;conditions[2]=4&amp;sort[#coaching_id]=ASC&amp;pagination[pageSize]=2">https://app.upfit.com.ua/api/v1/coaching/index?language=ru&amp;conditions[0]=&lt;&amp;conditions[1]=#coaching_id&amp;conditions[2]=4&amp;sort[#coaching_id]=ASC&amp;pagination[pageSize]=2</a>
+                                    </td>
+                <td>example request</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Parameters</h4>
+
+                        <table class="table table-condensed table-bordered table-hover">
+        <tr>
+            <th>Type</th>
+            <th>Name</th>
+            <th>Required</th>
+            <th>Description</th>
+                            <th>Available Field</th>
+            
+        </tr>
+                    <tr>
+                <td class="method-parameter-type">array</td>
+                <td class="method-parameter-name">conditions</td>
+                <td class="method-parameter-required">false</td>
+                <td class="method-parameter-description">Condition params:</p>
+
+<p><b>conditions[0]</b> = [operator]</p>
+
+<p><b>conditions[1]</b> = [field] (with first symbol #)</p>
+
+<p><b>conditions[2]</b> = [value]</p>
+
+<p><small><i>available operators: '>' '>=' '&lt;' '&lt;=' '=' '&lt;>' 'like' 'in' 'not in'</i></small></td>
+                                                            <td class="method-parameter-description">
+                            <h5>Api Coaching :</h5>
+                                  
+       <small class="field-list"><ul>
+       <li>#coaching_id <span> &lt; int &gt; </span> </li>
+       <li>#coaching_parent_id <span> &lt; int &gt; </span> </li>
+       <li>#coaching_name <span> &lt; string &gt; </span> </li>
+       <li>#coaching_description <span> &lt; string &gt; </span> </li>
+       <li>#coaching_level <span> &lt; string &gt; </span> </li>
+       <li>#coaching_price <span> &lt; float &gt; </span> </li>
+       <li>#coaching_capacity <span> &lt; int &gt; </span> </li>
+       <li>#coaching_color <span> &lt; string &gt; </span> </li>
+       <li>#coaching_created_by <span> &lt; int &gt; </span> </li>
+       <li>#coaching_created_at <span> &lt; datetime &gt; </span> </li>
+       <li>#coaching_updated_at <span> &lt; datetime &gt; </span> </li>
+       <li>#coaching_updated_by <span> &lt; int &gt; </span> </li>
+       </ul></small>
+       </br>
+                                                            And other models:
+                                <a href="/web/sami/build/api/models/AvailableApiField.html">Api Club, Api Subplace</a>
+                                                    </td>
+                                                </tr>
+                    <tr>
+                <td class="method-parameter-type">array</td>
+                <td class="method-parameter-name">sort</td>
+                <td class="method-parameter-required">false</td>
+                <td class="method-parameter-description"><b>sort[#field]</b> = [type]</p>
+
+<p><small><i>available types: 'ASC' 'DESC'</i></small></td>
+                                                            <td></td>
+                                                </tr>
+                    <tr>
+                <td class="method-parameter-type">array</td>
+                <td class="method-parameter-name">pagination</td>
+                <td class="method-parameter-required">false</td>
+                <td class="method-parameter-description"><b>pagination[type]</b> = [value]</td>
+                                                            <td></td>
+                                                </tr>
+                    <tr>
+                <td class="method-parameter-type">string</td>
+                <td class="method-parameter-name">language</td>
+                <td class="method-parameter-required">false</td>
+                <td class="method-parameter-description">Params:
+<b>language</b> = 'ru' or 'en' default uk</td>
+                                                            <td></td>
+                                                </tr>
+            </table>
+
+            
+                            <h4>Example response</h4>
+
+                    <pre><code>{
+  'coaching': [
+     {
+      'coaching_id': '1',
+      'club_id': '2',
+      'place_id': '7',
+      'trainers': [],
+      'name': 'Йога',
+      'description': 'Занятия ведет преподаватель хатха йоги, медицинский психолог Евгения Танковская.',
+      'level': 'easy',
+      'price': '120',
+      'image': 'https://dev.upfit.com.ua/storage/images/coaching/1/1545047359_5760.jpg',
+      'color': ',
+      'capacity': '30'
+     },
+     {
+      'coaching_id': '2',
+      'club_id': '3',
+      'place_id': '5',
+      'trainers': [],
+      'name': 'Boxaerobics',
+      'description': 'Отрабатывая на мешках технику удара, нужно двигаться не только правильно, но и красиво! Это тяжело, но очень круто – выходишь как победитель после настоящего боя',
+      'level': 'hard',
+      'price': '130',
+      'image': https://dev.upfit.com.ua/storage/images/coaching/2/1545047359_5760.jpg,
+      'color': null,
+      'capacity': '15'
+     }
+  ],
+  'success': true
+}</code></pre>
+
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

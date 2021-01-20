@@ -1,0 +1,92 @@
+.uf-listing .panel-heading {
+  height: 42px;
+  padding: 7px 7px;
+}
+.uf-listing .panel-heading strong {
+  font-weight: normal;
+  margin-left: 10px;
+  vertical-align: sub;
+}
+.uf-listing .panel-body {
+  padding: 0;
+}
+.uf-listing .uf-listing-button {
+  cursor: pointer;
+}
+.uf-listing .uf-listing-button:hover {
+  opacity: 0.8;
+}
+.uf-listing .uf-listing-button.uf-listing-button-delete {
+  color: #3c8dbc;
+}
+.uf-listing .uf-listing-button.uf-listing-button-edit {
+  color: #3c8dbc;
+}
+.uf-listing table thead th a {
+  color: #333;
+}
+.uf-confirm-dialog.fade {
+  opacity: 1;
+}
+.uf-confirm-dialog .modal-dialog {
+  top: 15%;
+}
+.img-thumbnail {
+  max-width: 200px;
+  max-height: 200px;
+}
+.uf-customer-change-status {
+  cursor: pointer;
+}
+.uf-notification-change-status {
+  cursor: pointer;
+}
+.grid-view .table thead input {
+  width: 100%;
+}
+.grid-view .table thead th {
+  position: relative;
+  padding-right: 30px;
+}
+.grid-view .table thead th .sorting {
+  cursor: pointer;
+}
+.grid-view .table thead th .sorting:after {
+  opacity: 0.2;
+  content: "\e150";
+  font-family: 'Glyphicons Halflings';
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  display: block;
+}
+.grid-view .table thead th .asc:after {
+  opacity: 0.5;
+  content: "\e155";
+  font-family: 'Glyphicons Halflings';
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  display: block;
+}
+.grid-view .table thead th .desc:after {
+  opacity: 0.5;
+  content: "\e156";
+  font-family: 'Glyphicons Halflings';
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  display: block;
+}
+.grid-view .table td {
+  vertical-align: middle;
+  overflow-x: hidden;
+  word-break: break-word;
+}
+.grid-view td:last-child {
+  text-align: center;
+}
+.list-pagination {
+  text-align: right;
+  margin: 8px 0 0;
+}

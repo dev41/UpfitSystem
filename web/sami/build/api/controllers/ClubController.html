@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>api\controllers\ClubController | UpfitSystem API Documentations v1.0</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:api_controllers_ClubController" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">UpfitSystem API Documentations v1.0</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                    <li><a href="/"><strong class="site-url">UpfitSystem</strong></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../api.html">api</a></li><li class="backslash">\</li><li><a href="../../api/controllers.html">controllers</a></li><li class="backslash">\</li><li>ClubController</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            ClubController
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>ClubController</strong>        extends <abbr title="app\src\library\BaseApiController">BaseApiController</abbr>
+</p>
+
+        
+    
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table class="summary-table table table-striped table-bordered table-hover">
+        <colgroup>
+            <col class="col-method">
+            <col class="col-description">
+            <col class="col-defined">
+        </colgroup>
+        <tbody>
+        <tr>
+            <th>Method</th>
+            <th>Description</th>
+        </tr>
+                    <tr class="inherited">
+                <td>
+                    <a href="#method_actionIndex"><strong class="method-type">array</strong> <strong>actionIndex</strong><span class="symbol-black">(</span><span class=optional-param><strong class="type">array </strong>$conditions = [],</span><span class=optional-param><strong class="type">array </strong>$sort = [],</span><span class=optional-param><strong class="type">array </strong>$pagination = [],</span><span class=optional-param><strong class="type">string </strong>$language = null</span><span class="symbol-black">)</span>
+        </a>
+                </td>
+                                    <td>Returns clubs list</td></tr>
+                    <tr class="inherited">
+                <td>
+                    <a href="#method_actionDetails"><strong class="method-type">array</strong> <strong>actionDetails</strong><span class="symbol-black">(</span><span class=required-param><strong class="type">int </strong>$club_id,</span><span class=optional-param><strong class="type">string </strong>$language = null</span><span class="symbol-black">)</span>
+        </a>
+                </td>
+                                    <td>Returns the info about club</td></tr>
+                </tbody>
+    </table>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <a href="#method_actionIndex"><h3  id="method_actionIndex">
+        <div class="location">at         line 90</div>
+        <div class="method-signature">                    <strong class="method-type">array</strong>
+    <strong>actionIndex</strong><span class="symbol-black">(</span><span class=optional-param><strong class="type">array </strong>$conditions = [],</span><span class=optional-param><strong class="type">array </strong>$sort = [],</span><span class=optional-param><strong class="type">array </strong>$pagination = [],</span><span class=optional-param><strong class="type">string </strong>$language = null</span><span class="symbol-black">)</span>
+        </div>
+        </h3></a>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns clubs list</p>                                                </div>
+                <div class="tags">
+                            <h4>HTTP Request</h4>
+
+                    <table class="table table-condensed table-bordered table-hover">
+        <tr>
+            <th>Url</th>
+            <th>Description</th>
+        </tr>
+                    <tr>
+                <td>
+                                            <a href="https://app.upfit.com.ua/api/v1/club/index">https://app.upfit.com.ua/api/v1/club/index</a>
+                                    </td>
+                <td>base url</td>
+            </tr>
+                    <tr>
+                <td>
+                                            <a href="https://app.upfit.com.ua/api/v1/club/index?conditions[0]=&lt;&amp;conditions[1]=#club_id&amp;conditions[2]=4&amp;sort[#club_id]=DESC&amp;pagination[pageSize]=3&amp;language=ru">https://app.upfit.com.ua/api/v1/club/index?conditions[0]=&lt;&amp;conditions[1]=#club_id&amp;conditions[2]=4&amp;sort[#club_id]=DESC&amp;pagination[pageSize]=3&amp;language=ru</a>
+                                    </td>
+                <td>example request</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Parameters</h4>
+
+                        <table class="table table-condensed table-bordered table-hover">
+        <tr>
+            <th>Type</th>
+            <th>Name</th>
+            <th>Required</th>
+            <th>Description</th>
+                            <th>Available Field</th>
+            
+        </tr>
+                    <tr>
+                <td class="method-parameter-type">array</td>
+                <td class="method-parameter-name">conditions</td>
+                <td class="method-parameter-required">false</td>
+                <td class="method-parameter-description">Condition params:</p>
+
+<p><b>conditions[0]</b> = [operator]</p>
+
+<p><b>conditions[1]</b> = [#field]</p>
+
+<p><b>conditions[2]</b> = [value]</p>
+
+<p><small><i>available operators: '>' '>=' '&lt;' '&lt;=' '=' '&lt;>' 'like' 'in' 'not in'</i></small></td>
+                                                            <td class="method-parameter-description">
+                            <h5>Api Club :</h5>
+                                  
+       <small class="field-list"><ul>
+       <li>#club_id <span> &lt; int &gt; </span> </li>
+       <li>#club_name <span> &lt; string &gt; </span> </li>
+       <li>#club_description <span> &lt; string &gt; </span> </li>
+       <li>#club_address <span> &lt; string &gt; </span> </li>
+       <li>#club_country <span> &lt; string &gt; </span> </li>
+       <li>#club_city <span> &lt; string &gt; </span> </li>
+       <li>#club_lat <span> &lt; float &gt; </span> </li>
+       <li>#club_lng <span> &lt; float &gt; </span> </li>
+       <li>#club_created_at <span> &lt; datetime &gt; </span> </li>
+       <li>#club_created_by <span> &lt; int &gt; </span> </li>
+       <li>#club_updated_at <span> &lt; datetime &gt; </span> </li>
+       <li>#club_updated_by <span> &lt; int &gt; </span> </li>
+       </ul></small>
+       </br>
+                                                            And other models:
+                                <a href="/web/sami/build/api/models/AvailableApiField.html">Api Coaching</a>
+                                                    </td>
+                                                </tr>
+                    <tr>
+                <td class="method-parameter-type">array</td>
+                <td class="method-parameter-name">sort</td>
+                <td class="method-parameter-required">false</td>
+                <td class="method-parameter-description"><b>sort[#field]</b> = [type]</p>
+
+<p><small><i>available types: 'ASC' 'DESC'</i></small></td>
+                                                            <td></td>
+                                                </tr>
+                    <tr>
+                <td class="method-parameter-type">array</td>
+                <td class="method-parameter-name">pagination</td>
+                <td class="method-parameter-required">false</td>
+                <td class="method-parameter-description"><b>pagination[type]</b> = [value]</td>
+                                                            <td></td>
+                                                </tr>
+                    <tr>
+                <td class="method-parameter-type">string</td>
+                <td class="method-parameter-name">language</td>
+                <td class="method-parameter-required">false</td>
+                <td class="method-parameter-description">Params:
+<b>language</b> = 'ru' or 'en' default uk</td>
+                                                            <td></td>
+                                                </tr>
+            </table>
+
+            
+                            <h4>Example response</h4>
+
+                    <pre><code>{
+  'clubs': [
+    {
+     'id': '1',
+     'name': 'Super Сlub',
+     'city': 'Запоріжжя',
+     'address': 'проспект Соборний 158',
+     'lat': '47.8374',
+     'lng': '35.143',
+     'logo': 'https://dev.upfit.com.ua/storage/images/club/1/logo/1541577537logo_5760.jpg'
+    },
+    {
+     'id': '2',
+     'name': 'FIT HAUS',
+     'city': 'Полтава',
+     'address': 'вулиця Гоголя 21',
+     'lat': '49.5855',
+     'lng': '34.5568',
+     'logo': 'https://dev.upfit.com.ua/storage/images/club/2/logo/1541577537logo_5760.jpg'
+    },
+    {
+     'id': '3',
+     'name': 'Kiev Sport',
+     'city': 'Киев',
+     'address': 'Бульвар Дружбы Народов 5,',
+     'lat': '49.5855',
+     'lng': '34.5568',
+     'logo': 'https://dev.upfit.com.ua/storage/images/club/3/logo/1541577537logo_5760.jpg'
+    }
+  ],
+  'success': true
+}</code></pre>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <a href="#method_actionDetails"><h3  id="method_actionDetails">
+        <div class="location">at         line 299</div>
+        <div class="method-signature">                    <strong class="method-type">array</strong>
+    <strong>actionDetails</strong><span class="symbol-black">(</span><span class=required-param><strong class="type">int </strong>$club_id,</span><span class=optional-param><strong class="type">string </strong>$language = null</span><span class="symbol-black">)</span>
+        </div>
+        </h3></a>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the info about club</p>                                                </div>
+                <div class="tags">
+                            <h4>HTTP Request</h4>
+
+                    <table class="table table-condensed table-bordered table-hover">
+        <tr>
+            <th>Url</th>
+            <th>Description</th>
+        </tr>
+                    <tr>
+                <td>
+                                            <a href="https://app.upfit.com.ua/api/v1/club/details">https://app.upfit.com.ua/api/v1/club/details</a>
+                                    </td>
+                <td>base url</td>
+            </tr>
+                    <tr>
+                <td>
+                                            <a href="https://app.upfit.com.ua/api/v1/club/details?club_id=1&amp;language=ru">https://app.upfit.com.ua/api/v1/club/details?club_id=1&amp;language=ru</a>
+                                    </td>
+                <td>example request</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Parameters</h4>
+
+                        <table class="table table-condensed table-bordered table-hover">
+        <tr>
+            <th>Type</th>
+            <th>Name</th>
+            <th>Required</th>
+            <th>Description</th>
+            
+        </tr>
+                    <tr>
+                <td class="method-parameter-type">int</td>
+                <td class="method-parameter-name">club_id</td>
+                <td class="method-parameter-required">true</td>
+                <td class="method-parameter-description"></td>
+                            </tr>
+                    <tr>
+                <td class="method-parameter-type">string</td>
+                <td class="method-parameter-name">language</td>
+                <td class="method-parameter-required">false</td>
+                <td class="method-parameter-description">Params:
+<b>language</b> = 'ru' or 'en'</td>
+                            </tr>
+            </table>
+
+            
+                            <h4>Example response</h4>
+
+                    <pre><code>{
+  'club': [
+    {
+     'id': '1',
+     'name': 'Super Сlub',
+     'type': '1',
+     'city': 'Запоріжжя',
+     'address': 'проспект Соборний 158',
+     'images': [
+      'https://dev.upfit.com.ua/storage/images/club/1/1541581743_100x500.png',
+      'https://dev.upfit.com.ua/storage/images/club/1/1541581743_kievclublogo.png'
+     ],
+     'logo': 'https://dev.upfit.com.ua/storage/images/club/1/logo/1541577537logo_5760.jpg',
+     'lat': '47.8374',
+     'lng': '35.143',
+     'description': 'Этот клуб видит только суперадмин',
+     'created_at': '31-08-2018'
+     }
+  ],
+  'staff': [
+    {
+     'club_name': 'FIT HAUS',
+     'username': 'andrey',
+     'positions': 'trainer',
+     'club_id': '2',
+     'user_id': '2'
+     'first_name': 'Andrey',
+     'last_name': 'Saimon',
+     'description': ',
+     'images': [
+      'https://dev.upfit.com.ua/storage/images/staff/1/1541581743_100x500.png',
+      'https://dev.upfit.com.ua/storage/images/staff/1/1541581743_kievclublogo.png'
+     ],
+      'avatar': 'https://dev.upfit.com.ua/storage/images/staff/1/logo/1541581743logo_push_icon.jpg'
+     },
+    {
+     'club_name': 'FIT HAUS',
+     'username': 'vasiliy',
+     'positions': 'admin',
+     'club_id': '2',
+     'user_id': '3'
+     'first_name': 'Vasiliy',
+     'last_name': 'Saimon',
+     'description': ',
+     'images': [
+      'https://dev.upfit.com.ua/storage/images/staff/1/1541581743_100x500.png',
+      'https://dev.upfit.com.ua/storage/images/staff/1/1541581743_kievclublogo.png'
+     ],
+     'avatar': 'https://dev.upfit.com.ua/storage/images/staff/1/logo/1541581743logo_push_icon.jpg'
+     }
+  ],
+  'places': [
+    {
+     'id': '4',
+     'club_id': '1',
+     'name': 'Бассейн',
+     'type': '3',
+     'city': null,
+     'address': 'г. Киев, Бульвар Дружбы Народов 5,',
+     'images': [
+      'https://dev.upfit.com.ua/storage/images/subplace/1/1541581743_100x500.png',
+      'https://dev.upfit.com.ua/storage/images/subplace/1/1541581743_kievclublogo.png'
+     ],
+     'description': 'Да, он небольшой. А разве может райский уголок быть большим? Конечно, киевское солнце не сравнить с калифорнийским, но зеленая трава, синяя вода, белый шезлонг и легкая музыка заставляют забыть об этом. А еще мы здесь круглый год тренируемся.',
+     'created_at': '31-08-2018'
+     },
+    {
+     'id': '8',
+     'club_id': '1',
+     'name': 'Бассейн',
+     'type': '3',
+     'city': null,
+     'address': 'г. Киев, Бульвар Дружбы Народов 5,',
+     'images': [
+      'https://dev.upfit.com.ua/storage/images/subplace/1/1541581743_100x500.png',
+      'https://dev.upfit.com.ua/storage/images/subplace/1/1541581743_kievclublogo.png'
+     ],
+     'description': 'Да, он небольшой. А разве может райский уголок быть большим? Конечно, киевское солнце не сравнить с калифорнийским, но зеленая трава, синяя вода, белый шезлонг и легкая музыка заставляют забыть об этом. А еще мы здесь круглый год тренируемся.',
+     'created_at': '03-09-2018'
+     }
+  ],
+  'coaching': [
+    {
+     'capacity': 30,
+     'coaching_level_id': 1,
+     'id': 1,
+     'parent_id': null,
+     'name': 'Йога',
+     'description': 'Занятия ведет преподаватель хатха йоги, медицинский психолог Евгения Танковская.',
+     'price': 120,
+     'color': null,
+     'created_at': '2018-08-31 07:35:22',
+     'created_by': 1,
+     'updated_at': null,
+     'updated_by': null
+     },
+    {
+     'capacity': 15,
+     'coaching_level_id': 3,
+     'id': 2,
+     'parent_id': null,
+     'name': 'Boxaerobics',
+     'description': 'Отрабатывая на мешках технику удара, нужно двигаться не только правильно, но и красиво! Это тяжело, но очень круто – выходишь как победитель после настоящего боя',
+     'price': 130,
+     'color': null,
+     'created_at': '2018-08-31 07:35:22',
+     'created_by': 1,
+     'updated_at': null,
+     'updated_by': null
+     }
+  ],
+  'events': [
+    {
+     'event_id': '1',
+     'parent_id': '2',
+     'trainers': [
+     {
+      'id': 2,
+      'username': 'andrey',
+      'auth_key': 'vCzeiVsVEjgSi2WOcTIY-p9kL-tqSV-F',
+      'password_hash': '$2y$13$bRJPMcerRXnF0C3hoihxx.bqW6LDW3byUcFPJKf0WSLEb4koAlJ5a',
+      'password_reset_token': null,
+      'email': 'vangov@mail.com',
+      'api_auth_key': null,
+      'fb_user_id': '181724282660547',
+      'fb_token': null,
+      'push_token': null,
+      'device_id': null,
+      'role_id': 4,
+      'first_name': 'Andrey',
+      'last_name': 'Vangov',
+      'address': 'Украина, 01133, г. Киев, ул. Кутузова, 18/7',
+      'description': null,
+      'phone': '+370674132612',
+      'birthday': '2018-11-06',
+      'avatar': null,
+      'status': 1,
+      'created_at': '2018-11-06 11:12:13',
+      'created_by': 1,
+      'updated_at': null,
+      'updated_by': null
+     },
+     {
+      'id': 4,
+      'username': 'ivan',
+      'auth_key': 'xYLvDk-HkrBFXeudsUa6ZFPJK5J1Pzuk',
+      'password_hash': '$2y$13$V1GtkXd0xHXlxdB9eac/4.VMfoAi77er72oy.J5PAFKvOqJbguSSC',
+      'password_reset_token': null,
+      'email': 'ivan.p@mail.com',
+      'api_auth_key': null,
+      'fb_user_id': '291724282660547',
+      'fb_token': null,
+      'push_token': null,
+      'device_id': null,
+      'role_id': 5,
+      'first_name': 'Ivan',
+      'last_name': 'Petrov',
+      'address': 'Украина, 02133, г. Харьков, ул. Победы, 28/7',
+      'description': null,
+      'phone': '+370514132612',
+      'birthday': '2018-11-06',
+      'avatar': null,
+      'status': 1,
+      'created_at': '2018-11-06 11:12:13',
+      'created_by': 1,
+      'updated_at': null,
+      'updated_by': null
+     }
+     ],
+     'start': '2018-11-14 13:40:00',
+     'end': '2018-11-07 12:30:00',
+     'title': 'Йога',
+     'description': 'Занятия ведет преподаватель хатха йоги, медицинский психолог Евгения Танковская.',
+     'level': 'easy',
+     'price': '120',
+     'color': ',
+     'capacity': '30',
+     'customersId': [
+      '1',
+      '2',
+      '3',
+      '4',
+      '6',
+      '7'
+     ]
+  ],
+  'success': true
+}</code></pre>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="/web/sami/build/app/src/exception/ApiException.html"><abbr title="api\controllers\1102">1102</abbr></a></td>
+                <td>Required params not found</td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

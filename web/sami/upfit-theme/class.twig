@@ -1,0 +1,351 @@
+{% extends "layout/layout.twig" %}
+{% from "macros.twig" import render_classes, breadcrumbs, namespace_link, class_link, property_link, method_link, hint_link, source_link, method_source_link, deprecated, deprecations, todo, todos %}
+{% block title %}{{ class|raw }} | {{ parent() }}{% endblock %}
+{% block body_class 'class' %}
+{% block page_id 'class:' ~ (class.name|replace({'\\': '_'})) %}
+
+{% block below_menu %}
+    {% if class.namespace %}
+        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">{{ class.categoryName|raw }}</span></li>
+                {{ breadcrumbs(class.namespace) -}}
+                <li>{{ class.shortname|raw }}</li>
+            </ol>
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block page_content %}
+
+    <div class="page-header">
+        <h1>
+            {{ class.name|split('\\')|last|raw }}
+            {{ deprecated(class) }}
+        </h1>
+    </div>
+
+    <p>{{ block('class_signature') }}</p>
+
+    {{ deprecations(class) }}
+
+    {% if class.shortdesc or class.longdesc %}
+        <div class="description">
+            {% if class.shortdesc -%}
+                <p>{{ class.shortdesc|desc(class) }}</p>
+            {%- endif %}
+            {% if class.longdesc -%}
+                <p>{{ class.longdesc|desc(class) }}</p>
+            {%- endif %}
+            {% if project.config('insert_todos') == true %}
+                {{ todos(class) }}
+            {% endif %}
+        </div>
+    {% endif %}
+
+    {% if constants %}
+        <h2>Constants</h2>
+
+        {{ block('constants') }}
+    {% endif %}
+
+    {% if properties %}
+        <h2>Properties</h2>
+
+        {{ block('properties') }}
+    {% endif %}
+
+    {% if methods %}
+        <h2>Methods</h2>
+
+        {{ block('methods') }}
+
+        <h2>Details</h2>
+
+        {{ block('methods_details') }}
+    {% endif %}
+
+{% endblock %}
+
+{% block class_signature -%}
+    {% if not class.interface and class.abstract %}abstract {% endif %}
+    {{ class.categoryName|raw }}
+    <strong>{{ class.shortname|raw }}</strong>
+    {%- if class.parent %}
+        extends {{ class_link(class.parent) }}
+    {%- endif %}
+    {%- if class.interfaces|length > 0 %}
+        implements
+        {% for interface in class.interfaces %}
+            {{- class_link(interface) }}
+            {%- if not loop.last %}, {% endif %}
+        {%- endfor %}
+    {%- endif %}
+    {{- source_link(project, class) }}
+{% endblock %}
+
+{% block method_signature -%}
+    {% if method.final %}final{% endif %}
+    {% if method.abstract %}abstract{% endif %}
+    {% if method.static %}static{% endif %}
+    {% if method.protected %}protected{% endif %}
+    {% if method.private %}private{% endif %}
+    <strong class="method-type">{{ hint_link(method.hint) }}</strong>
+    <strong>{{ method.name|raw }}</strong>{{ block('method_parameters_signature') }}
+{%- endblock %}
+
+{% block method_parameters_signature -%}
+    {%- from "macros.twig" import method_parameters_signature -%}
+    {{ method_parameters_signature(method) }}
+    {{ deprecated(method) }}
+{%- endblock %}
+
+{% block parameters %}
+    {% set available_field = get_available_field(method) %}
+    <table class="table table-condensed table-bordered table-hover">
+        <tr>
+            <th>Type</th>
+            <th>Name</th>
+            <th>Required</th>
+            <th>Description</th>
+            {% if available_field %}
+                <th>Available Field</th>
+            {% endif %}
+
+        </tr>
+        {% for parameter in method.parameters %}
+            <tr>
+                <td class="method-parameter-type">{% if parameter.hint %}{{ hint_link(parameter.hint) }}{% endif %}</td>
+                <td class="method-parameter-name">{%- if parameter.variadic %}...{% endif %}{{ parameter.name|raw }}</td>
+                <td class="method-parameter-required">{%- if parameter.default %}false{% else %}true{% endif %}</td>
+                <td class="method-parameter-description">{{ parameter.shortdesc|desc(class) }}</td>
+                {% if available_field %}
+                    {% if parameter.name is same as('conditions') %}
+                        <td class="method-parameter-description">
+                            <h5>{{ available_field.available_fields_model }}</h5>
+                            {{ available_field.available_fields|raw }}
+                            {% if available_field.available_fields_other_model is defined %}
+                                And other models:
+                                <a href="/web/sami/build/api/models/AvailableApiField.html">{{ available_field.available_fields_other_model }}</a>
+                            {% endif %}
+                        </td>
+                    {% else %}
+                        <td></td>
+                    {% endif %}
+                {% endif %}
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+
+{% block return %}
+    <pre><code>{{ method.hintDesc|desc(class) }}</code></pre>
+{% endblock %}
+
+{% block exceptions %}
+    <table class="table table-condensed">
+        {% for exception in method.exceptions %}
+            <tr>
+                <td><a href="/web/sami/build/app/src/exception/ApiException.html">{{ class_link(exception[0]) }}</a></td>
+                <td>{{ exception[1]|desc(class) }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+
+{% block see %}
+    <table class="table table-condensed table-bordered table-hover">
+        <tr>
+            <th>Url</th>
+            <th>Description</th>
+        </tr>
+        {% for see in method.see %}
+            <tr>
+                <td>
+                    {% if see[4] %}
+                        <a href="{{see[4]}}">{{see[4]}}</a>
+                    {% elseif see[3] %}
+                        {{ method_link(see[3], false, false) }}
+                    {% elseif see[2] %}
+                        {{ class_link(see[2]) }}
+                    {% else %}
+                        {{ see[0]|raw }}
+                    {% endif %}
+                </td>
+                <td>{{ see[1]|raw }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+
+{% block constants %}
+    <table class="summary-table table table-bordered table-hover">
+        <tbody>
+        {% set IsExceptionsCodes = is_exceptions_codes(constants) %}
+        {% if IsExceptionsCodes %}
+        <tr>
+            <th>Code</th>
+            <th>Message</th>
+            <th>Response</th>
+            <th>Description</th>
+        </tr>
+            {% for constant in constants %}
+                {% set code = get_code(constant) %}
+                {% if code %}
+                    <tr>
+                        <td class="code">
+                            <a id="constant_{{ code.code }}">{{ code.code }}</a>
+                        </td>
+                        <td class="message">
+                            {{ code.codeMessage }}
+                        </td>
+                        <td class="response">
+                            <pre>{{ code.codeResponse }}</pre>
+                        </td>
+                        <td class="constant_description">
+                            {{ code.codeDescription }}
+                        </td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            <tr>
+                <th>Api Model Name</th>
+                <th>Map Fields</th>
+            </tr>
+            {% for constant in constants %}
+                {% set model = get_model(constant) %}
+                {% if model %}
+                    <tr>
+                        <td class="model-name">
+                            <a id="model_{{ model.model_name }}">{{ model.model_name }}</a>
+                        </td>
+                        <td class="map-fields">
+                            {{ model.map_fields|raw }}
+                        </td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+        </tbody>
+    </table>
+{% endblock %}
+
+{% block properties %}
+    <table class="table table-condensed">
+        {% for property in properties %}
+            <tr>
+                <td class="type" id="property_{{ property.name|raw }}">
+                    {% if property.static %}static{% endif %}
+                    {% if property.protected %}protected{% endif %}
+                    {% if property.private %}private{% endif %}
+                    {{ hint_link(property.hint) }}
+                </td>
+                <td>${{ property.name|raw }}</td>
+                <td class="last">{{ property.shortdesc|desc(class) }}</td>
+                <td>
+                    {%- if property.class is not same as(class) -%}
+                        <small>from&nbsp;{{ property_link(property, false, true) }}</small>
+                    {%- endif -%}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+
+{% block methods %}
+    <table class="summary-table table table-striped table-bordered table-hover">
+        <colgroup>
+            <col class="col-method">
+            <col class="col-description">
+            <col class="col-defined">
+        </colgroup>
+        <tbody>
+        <tr>
+            <th>Method</th>
+            <th>Description</th>
+        </tr>
+        {% for method in methods %}
+            <tr class="inherited">
+                <td>
+                    <a href="#method_{{ method.name|raw }}"><strong class="method-type">{{ hint_link(method.hint) }}</strong> <strong>{{ method.name|raw }}</strong>{{ block('method_parameters_signature') }}</a>
+                </td>
+                {% if not method.shortdesc %}
+                    <td>No description</td>
+                {% else %}
+                    <td>{{ method.shortdesc|desc(class) }}</td>
+                {%- endif %}
+                {%- if method.class is not same as(class) -%}
+                    <td>
+                        <small>from&nbsp;{{ method_link(method, false, true) }}</small>
+                    </td>
+                {%- endif -%}
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+
+{% block methods_details %}
+    <div id="method-details">
+        {% for method in methods %}
+            <div class="method-item">
+                {{ block('method') }}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+
+{% block method %}
+    <a href="#method_{{ method.name|raw }}"><h3  id="method_{{ method.name|raw }}">
+        <div class="location">{% if method.class is not same as(class) %}in {{ method_link(method, false, true) }} {% endif %}at {{ method_source_link(method) }}</div>
+        <div class="method-signature">{{ block('method_signature') }}</div>
+        </h3></a>
+    <div class="details">
+        {{ deprecations(method) }}
+
+        {% if method.shortdesc or method.longdesc %}
+            <div class="method-description">
+                {% if not method.shortdesc and not method.longdesc %}
+                    <p class="no-description">No description</p>
+                {% else %}
+                    {% if method.shortdesc -%}
+                    <p>{{ method.shortdesc|desc(class) }}</p>
+                    {%- endif %}
+                    {% if method.longdesc -%}
+                    <p>{{ method.longdesc|desc(class) }}</p>
+                    {%- endif %}
+                {%- endif %}
+                {% if project.config('insert_todos') == true %}
+                    {{ todos(method) }}
+                {% endif %}
+            </div>
+        {% endif %}
+        <div class="tags">
+            {% if method.tags('see') %}
+                <h4>HTTP Request</h4>
+
+                {{ block('see') }}
+            {% endif %}
+
+            {% if method.parameters %}
+                <h4>Parameters</h4>
+
+                {{ block('parameters') }}
+            {% endif %}
+
+            {% if method.hintDesc or method.hint %}
+                <h4>Example response</h4>
+
+                {{ block('return') }}
+            {% endif %}
+
+            {% if method.exceptions %}
+                <h4>Exceptions</h4>
+
+                {{ block('exceptions') }}
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

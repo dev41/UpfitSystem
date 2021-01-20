@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>app\src\exception\ApiException | UpfitSystem API Documentations v1.0</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:app_src_exception_ApiException" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">UpfitSystem API Documentations v1.0</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                    <li><a href="/"><strong class="site-url">UpfitSystem</strong></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../app.html">app</a></li><li class="backslash">\</li><li><a href="../../../app/src.html">src</a></li><li class="backslash">\</li><li><a href="../../../app/src/exception.html">exception</a></li><li class="backslash">\</li><li>ApiException</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            ApiException
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>ApiException</strong>        extends <a target="_blank" href="http://php.net/Exception">Exception</a>
+</p>
+
+        
+    
+
+    
+            <h2>Constants</h2>
+
+            <table class="summary-table table table-bordered table-hover">
+        <tbody>
+                        <tr>
+            <th>Code</th>
+            <th>Message</th>
+            <th>Response</th>
+            <th>Description</th>
+        </tr>
+                                                                                                                                                        <tr>
+                        <td class="code">
+                            <a id="constant_1101">1101</a>
+                        </td>
+                        <td class="message">
+                            Model {model} not found.
+                        </td>
+                        <td class="response">
+                            <pre>{
+    &quot;message&quot;: &quot;Model user not found.&quot;,
+    &quot;code&quot;: 1101,
+    &quot;model&quot;: &quot;user&quot;,
+    &quot;success&quot;: false
+}</pre>
+                        </td>
+                        <td class="constant_description">
+                            The reason of this could be the incorrect identity
+                        </td>
+                    </tr>
+                                                                                <tr>
+                        <td class="code">
+                            <a id="constant_1102">1102</a>
+                        </td>
+                        <td class="message">
+                            Required param {param} not found.
+                        </td>
+                        <td class="response">
+                            <pre>{
+    &quot;message&quot;: &quot;Required param id not found.&quot;,
+    &quot;code&quot;: 1102,
+    &quot;param&quot;: &quot;id&quot;,
+    &quot;success&quot;: false
+}</pre>
+                        </td>
+                        <td class="constant_description">
+                            The reason of this could be incorrect format of params or because they weren&quot;t be sent.
+                        </td>
+                    </tr>
+                                                                                <tr>
+                        <td class="code">
+                            <a id="constant_1103">1103</a>
+                        </td>
+                        <td class="message">
+                            Param {param} must be unique.
+                        </td>
+                        <td class="response">
+                            <pre>{
+    &quot;message&quot;: &quot;Param username must be unique.&quot;,
+    &quot;code&quot;: 1103,
+    &quot;param&quot;: &quot;username&quot;,
+    &quot;success&quot;: false
+}</pre>
+                        </td>
+                        <td class="constant_description">
+                            This could be because of not unique param.
+                        </td>
+                    </tr>
+                                                                                <tr>
+                        <td class="code">
+                            <a id="constant_1104">1104</a>
+                        </td>
+                        <td class="message">
+                            Relation {param} already exist.
+                        </td>
+                        <td class="response">
+                            <pre>{
+    &quot;message&quot;: &quot;Relation customer-place already exist.&quot;,
+    &quot;code&quot;: 1104,
+    &quot;relation&quot;: &quot;customer-club&quot;,
+    &quot;success&quot;: false
+}</pre>
+                        </td>
+                        <td class="constant_description">
+                            This could be because relation is already exist.
+                        </td>
+                    </tr>
+                                                                                                                            <tr>
+                        <td class="code">
+                            <a id="constant_1201">1201</a>
+                        </td>
+                        <td class="message">
+                            Capacity ({capacity}) limit reached.
+                        </td>
+                        <td class="response">
+                            <pre>{
+    &quot;message&quot;: &quot;Capacity (3) limit reached.&quot;,
+    &quot;code&quot;: 1201,
+    &quot;capacity&quot;: 3,
+    &quot;success&quot;: false
+}</pre>
+                        </td>
+                        <td class="constant_description">
+                            This can be because the training capacity limit is exceeded.
+                        </td>
+                    </tr>
+                                                                                <tr>
+                        <td class="code">
+                            <a id="constant_1202">1202</a>
+                        </td>
+                        <td class="message">
+                            The subscription to the event is ready.
+                        </td>
+                        <td class="response">
+                            <pre>{
+    &quot;message&quot;: &quot;The subscription to the event is ready.&quot;,
+    &quot;code&quot;: 1202,
+    &quot;success&quot;: false
+}</pre>
+                        </td>
+                        <td class="constant_description">
+                            The reason could be that the user isn&quot;t signed on an event.
+                        </td>
+                    </tr>
+                                                                                <tr>
+                        <td class="code">
+                            <a id="constant_1203">1203</a>
+                        </td>
+                        <td class="message">
+                            Identity or password incorrect.
+                        </td>
+                        <td class="response">
+                            <pre>{
+    &quot;message&quot;: &quot;Identity or password incorrect.&quot;,
+    &quot;code&quot;: 1203,
+    &quot;success&quot;: false
+}</pre>
+                        </td>
+                        <td class="constant_description">
+                            The reason of this could be the incorrect identity or password
+                        </td>
+                    </tr>
+                                                                                <tr>
+                        <td class="code">
+                            <a id="constant_1204">1204</a>
+                        </td>
+                        <td class="message">
+                            ID or token incorrect.
+                        </td>
+                        <td class="response">
+                            <pre>{
+    &quot;message&quot;: &quot;ID or token incorrect.&quot;,
+    &quot;code&quot;: 1204,
+    &quot;success&quot;: false
+}</pre>
+                        </td>
+                        <td class="constant_description">
+                            The reason of this could be the incorrect users facebook id or facebook token
+                        </td>
+                    </tr>
+                                                                                <tr>
+                        <td class="code">
+                            <a id="constant_1205">1205</a>
+                        </td>
+                        <td class="message">
+                            Facebook API bad response. Check the token and userId and try again.
+                        </td>
+                        <td class="response">
+                            <pre>{
+    &quot;message&quot;: &quot;Facebook API bad response. Check the token and userId and try again.&quot;,
+    &quot;code&quot;: 1205,
+    &quot;success&quot;: false
+}</pre>
+                        </td>
+                        <td class="constant_description">
+                            The reason could be that the user are&#039;t registered on Facebook or the wrong params of inquiry.
+                        </td>
+                    </tr>
+                                                                                <tr>
+                        <td class="code">
+                            <a id="constant_1206">1206</a>
+                        </td>
+                        <td class="message">
+                            Customer are not a club member.
+                        </td>
+                        <td class="response">
+                            <pre>{
+    &quot;message&quot;: &quot;Customer are not a club member.&quot;,
+    &quot;code&quot;: 1206,
+    &quot;success&quot;: false
+}</pre>
+                        </td>
+                        <td class="constant_description">
+                            The reason could be that the user are&#039;t club member.
+                        </td>
+                    </tr>
+                                                                                <tr>
+                        <td class="code">
+                            <a id="constant_1207">1207</a>
+                        </td>
+                        <td class="message">
+                            Payment signature is incorrect.
+                        </td>
+                        <td class="response">
+                            <pre>{
+    &quot;message&quot;: &quot;Payment signature is incorrect.&quot;,
+    &quot;code&quot;: 1207,
+    &quot;success&quot;: false
+}</pre>
+                        </td>
+                        <td class="constant_description">
+                            The reason could be that the payment signature is incorrect.
+                        </td>
+                    </tr>
+                                            </tbody>
+    </table>
+
+    
+    
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

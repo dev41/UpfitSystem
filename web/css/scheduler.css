@@ -1,0 +1,158 @@
+.uf-schedule-container {
+  color: #444;
+  max-width: 1200px;
+}
+.uf-schedule-container h1,
+.uf-schedule-container h2,
+.uf-schedule-container h3,
+.uf-schedule-container h4,
+.uf-schedule-container p {
+  margin: 0;
+}
+.uf-schedule-container .fc-view-container .fc-day-number {
+  font-size: 0.9em;
+}
+.uf-schedule-container .uf-event-container h3 {
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+.uf-schedule-container .fc-button {
+  background-color: #e9e9e9;
+}
+.uf-schedule-container .fc-button:hover,
+.uf-schedule-container .fc-button:active,
+.uf-schedule-container .fc-button.hover {
+  background-color: #f4f4f4;
+}
+.uf-schedule-container .fc-button .fc-corner-right,
+.uf-schedule-container .fc-button .fc-corner-left {
+  color: #777777;
+}
+.uf-schedule-container .fc-state-down,
+.uf-schedule-container .fc-state-active {
+  box-shadow: none;
+  background-color: white;
+}
+.uf-schedule-container .fc-state-down:hover,
+.uf-schedule-container .fc-state-active:hover {
+  background-color: white;
+}
+.uf-schedule-container .list-group {
+  margin-bottom: 15px;
+}
+.uf-schedule-container .form-group {
+  margin-bottom: 8px;
+}
+.uf-schedule-container > .panel-default > .panel-body {
+  padding-left: 0;
+  padding-right: 0;
+}
+.uf-schedule-container .fc-event {
+  border-color: #cccccc;
+  color: #333;
+  padding: 2px;
+  font-weight: normal;
+}
+.uf-schedule-container .fc-event,
+.uf-schedule-container .fc-event-dot {
+  background-color: #FFFFFF;
+  color: #333;
+}
+.uf-schedule-container .coaching-list a {
+  color: #333;
+  text-decoration: none;
+}
+.uf-schedule-container .coaching-list a:hover {
+  cursor: inherit;
+}
+.uf-schedule-container .coaching-list .fc-event {
+  padding-top: 3px;
+  padding-left: 5px;
+  cursor: move;
+}
+.uf-schedule-container .coaching-list .fc-event:hover {
+  animation: event-active 0.5s both;
+}
+.uf-schedule-container .coaching-list .fc-event:not(hover) {
+  animation: event-no-active 0.5s both;
+}
+@keyframes event-active {
+  0% {
+    border-color: #cccccc;
+  }
+  100% {
+    border-color: #333;
+  }
+}
+@keyframes event-no-active {
+  0% {
+    border-color: #333;
+  }
+  100% {
+    border-color: #cccccc;
+  }
+}
+.uf-schedule-container .coaching-list .list-group-item {
+  padding: 3px 3px;
+}
+.uf-schedule-container .coaching-list .list-group-item:first-child {
+  padding: 10px 3px;
+  text-align: center;
+}
+.uf-schedule-container .fc-toolbar {
+  padding: 0 0 10px 0;
+  margin-bottom: 0;
+}
+.uf-schedule-container .fc-toolbar button {
+  text-transform: uppercase;
+}
+.uf-schedule-container .fc-toolbar h2 {
+  font-size: 1.6em;
+  color: #444;
+}
+.uf-schedule-container .fc-toolbar .fc-left {
+  font-weight: normal;
+  font-size: 0.9em;
+}
+.uf-schedule-container .fc-time-grid.fc-unselectable .fc-bg table tbody tr td {
+  border: none;
+}
+.uf-schedule-container .fc-time-grid.fc-unselectable .fc-bg table tbody tr td.active {
+  background-color: #f0fff8;
+  border: 1px dashed #333;
+}
+.uf-schedule-container .fc-axis.fc-time {
+  font-weight: bold;
+  text-align: left;
+  color: #6c788e;
+  font-size: 0.85em;
+}
+.uf-schedule-container .fc-widget-header thead tr th span {
+  font-weight: bold;
+  overflow: hidden;
+  display: block;
+  padding: 3px;
+  text-overflow: ellipsis;
+  color: #6c788e;
+  background: #e2e4ee;
+  font-size: 0.85em;
+}
+.uf-popup .uf-schedule-container {
+  margin-bottom: 0;
+}
+.uf-popup .uf-schedule-container > .panel {
+  border: none;
+}
+.uf-popup .uf-schedule-container > .panel > .panel-body {
+  padding-bottom: 0;
+}
+.uf-popup .uf-schedule-container > .panel > .panel-body .container-fluid:first-of-type {
+  padding: 0;
+}
+.ui-widget-header {
+  border: 1px solid #ddd;
+  background: #e9e9e9;
+  color: #333;
+  font-weight: bold;
+}

@@ -1,0 +1,35 @@
+.uf-view {
+  overflow: hidden;
+}
+.uf-view .select2-container--disabled .select2-selection--multiple {
+  cursor: default;
+  background: white;
+  border: none;
+  box-shadow: none;
+}
+.uf-view .select2-selection.select2-selection--multiple .select2-selection__choice:first-child {
+  margin-left: 0px;
+}
+.uf-view .select2-search {
+  display: none;
+}
+.uf-view .row {
+  border-bottom: 1px solid #dddddd;
+  margin-top: 8px;
+}
+.uf-view .row:first-child {
+  margin-top: 0px;
+}
+.uf-view .row:first-child > div {
+  padding-left: 15px;
+}
+.uf-view .row:last-child {
+  border-bottom: none;
+}
+.uf-view .row > div {
+  min-height: 30px;
+  margin-bottom: 4px;
+}
+.uf-view .row > div:last-of-type {
+  margin-bottom: 4px;
+}
